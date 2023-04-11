@@ -1,0 +1,16 @@
+.LineProgress {
+  height: 20px;
+  width: 100px;
+  background-color: $scale;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  border-radius: 12px;
+  overflow: hidden;
+
+  &__progress {
+    width: 20%;
+    background-color: $level;
+  }
+}

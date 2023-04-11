@@ -1,0 +1,47 @@
+.card {
+  height: auto;
+  width: auto;
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 7px;
+  border-radius: 8px;
+  background-color: $background-card;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px 2px 18px -3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 4px 2px 18px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 2px 18px -3px rgba(0, 0, 0, 0.75);
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__content-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__main-content,
+  &__extra-content {
+    padding: 7px;
+    display: flex;
+  }
+
+  &__main-subcontent {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__extra-content > p {
+    // flex-direction: column;
+    text-align: center;
+    line-height: 1.1em;
+  }
+}

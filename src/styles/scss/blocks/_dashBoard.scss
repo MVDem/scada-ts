@@ -1,0 +1,16 @@
+.board {
+  height: 100%;
+  width: 80%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  &__container {
+    margin: 10px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+}
