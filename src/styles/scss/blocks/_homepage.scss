@@ -1,1 +1,9 @@
+.home {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
 
+  &__wrapper {
+    margin: auto;
+  }
+}

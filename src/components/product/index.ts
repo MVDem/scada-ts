@@ -6,6 +6,7 @@ import { LowVolt } from './LowVolt';
 export const systems: Array<HightVolt | LowVolt> = [];
 
 export function createSystems(obj: object): void {
+  systems.length = 0;
   const o = Object.keys(obj) as Array<keyof typeof obj>;
   o.forEach((p) => {
     if (p === 'userHightVolt') {

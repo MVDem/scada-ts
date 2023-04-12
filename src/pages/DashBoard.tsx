@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import HightVoltCard from '../components/layout/ElecHightVolt';
 import LowVoltCard from '../components/layout/ElecLowVolt';
 import { systems } from '../components/product';
@@ -5,6 +6,17 @@ import { HightVolt } from '../components/product/HightVolt';
 import { LowVolt } from '../components/product/LowVolt';
 
 export default function DashBoard() {
+  const [time, setTime] = useState(0);
+  useEffect(() => {
+    setInterval(() => {
+      systems.map((e) => {
+        e.setValue();
+        console.log('Значение загружено');
+        return setTime(1);
+      });
+    }, 5000);
+  }, [time]);
+
   return (
     <>
       <div id="board-container" className="board__container">

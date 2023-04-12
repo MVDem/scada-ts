@@ -81,5 +81,18 @@ export class LowVolt extends Products {
   setValue() {
     // this._maxPower=user.maxPower;
     //сделать запрос на сервер
+
+    fetch(
+      'https://raw.githubusercontent.com/MVDem/scada-ts/main/API/v1/user.json'
+    )
+      .then((response) => {
+        if (response.ok) {
+          // console.log(response.body);
+          return response.json();
+        }
+      })
+      .then((data) => {
+        // console.log(data);
+      });
   }
 }

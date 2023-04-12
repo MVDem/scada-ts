@@ -1,4 +1,11 @@
-import { data } from '../../API/v1/user';
 import { User } from './User';
 
-export const user = new User(data);
+// import { IUser } from './type';
+
+// export const user = new User(data);
+
+// console.log(user);
+
+// export let q: IUser;
+
+// console.log(getDataUser());

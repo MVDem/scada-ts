@@ -1,21 +1,27 @@
 import { IUserProducts, IUser } from './type';
 
 export class User {
-  name: string;
-  email: string;
-  phone: number;
-  city: string;
-  products: IUserProducts;
+  id?: string;
+  name?: string;
+  email?: string;
+  phone?: number;
+  city?: string;
+  products?: IUserProducts;
 
-  constructor({ name, email, phone, city, products }: IUser) {
-    this.name = name;
-    this.email = email;
-    this.phone = phone;
-    this.city = city;
-    this.products = products;
+  constructor(options: IUser | null) {
+    this.id = options?.id;
+    this.name = options?.name;
+    this.email = options?.email;
+    this.phone = options?.phone;
+    this.city = options?.city;
+    this.products = options?.products;
   }
 
-  //   setUserData(): IUser1 {
-  //     return;
-  //   }
+  setUserData(options: IUser) {
+    this.name = options.name;
+    this.email = options.email;
+    this.phone = options.phone;
+    this.city = options.city;
+    this.products = options.products;
+  }
 }

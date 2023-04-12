@@ -5,8 +5,6 @@ import { HightVolt } from '../components/product/HightVolt';
 import { LowVolt } from '../components/product/LowVolt';
 
 export default function Layout() {
-  //const isAuth: boolean = true;
-
   return (
     <>
       <header className="header"></header>
