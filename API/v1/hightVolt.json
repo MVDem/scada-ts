@@ -1,0 +1,39 @@
+{
+  "input1": {
+    "voltage": {
+      "anVoltage": 9800,
+      "bnVoltage": 9900,
+      "cnVoltage": 9700
+    },
+    "current": {
+      "aCurrent": 120,
+      "bCurrent": 150,
+      "cCurrent": 100,
+      "maxPower": 250
+    },
+    "switch": {
+      "switchOn": true,
+      "switchEr": true
+    }
+  },
+  "input2": {
+    "voltage": {
+      "anVoltage": 9800,
+      "bnVoltage": 9900,
+      "cnVoltage": 9700
+    },
+    "current": {
+      "aCurrent": 120,
+      "bCurrent": 150,
+      "cCurrent": 100,
+      "maxPower": 250
+    },
+    "switch": {
+      "switchOn": true,
+      "switchEr": true
+    }
+  },
+
+  "switchSOn": true,
+  "switchSEr": false
+}

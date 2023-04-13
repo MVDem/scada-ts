@@ -4,50 +4,44 @@
   "phone": 79602598255,
   "city": "Санкт-Петербург",
   "products": {
-    "obj": {
-      "userHightVolt": {
-        "type": "userHightVolt",
-        "name": "Power center 10kV",
-        "url": "#",
-        "namePLC": "PLC-Name",
-        "maxPower": 200
-      },
-      "userLowVolt": {
-        "type": "userLowVolt",
-        "name": "Power center 0.4kV",
-        "url": "#",
-        "namePLC": "PLC-Name",
-        "maxPower": 1600
-      },
-      "userGenerator": {
-        "type": "userGenerator",
-        "name": "Factory",
-        "url": "#",
-        "namePLC": "PLC-Name"
-      },
-      "userUPS": {
-        "type": "userUPS",
-        "name": "Factory",
-        "url": "#",
-        "namePLC": "PLC-Name"
-      },
-      "userWater": {
-        "type": "userWater",
-        "name": "Factory",
-        "url": "#",
-        "namePLC": "PLC-Name"
-      },
-      "userGas": {
-        "type": "userGas",
-        "name": "Factory",
-        "url": "#",
-        "namePLC": "PLC-Name"
-      },
-      "userHot": {
-        "type": "userHot",
-        "name": "Factory",
-        "url": "#",
-        "namePLC": "PLC-Name"
+    "obj1": {
+      "name": "factory1",
+      "adress": "SPb",
+      "systems": {
+        "userHightVolt": {
+          "type": "userHightVolt",
+          "name": "Power center 10kV",
+          "url": "#",
+          "namePLC": "PLC-Name",
+          "maxPower": 200
+        },
+        "userLowVolt": {
+          "type": "userLowVolt",
+          "name": "Power center 0.4kV",
+          "url": "#",
+          "namePLC": "PLC-Name",
+          "maxPower": 1600
+        }
+      }
+    },
+    "obj2": {
+      "name": "factory2",
+      "adress": "SPb",
+      "systems": {
+        "userHightVolt": {
+          "type": "userHightVolt",
+          "name": "Power center 10kV",
+          "url": "#",
+          "namePLC": "PLC-Name",
+          "maxPower": 200
+        },
+        "userLowVolt": {
+          "type": "userLowVolt",
+          "name": "Power center 0.4kV",
+          "url": "#",
+          "namePLC": "PLC-Name",
+          "maxPower": 1600
+        }
       }
     }
   }

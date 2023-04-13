@@ -1,0 +1,45 @@
+{
+  "input1": {
+    "voltage": {
+      "anVoltage": 220,
+      "bnVoltage": 220,
+      "cnVoltage": 220,
+      "abVoltage": 380,
+      "acVoltage": 380,
+      "bcVoltage": 380
+    },
+    "current": {
+      "aCurrent": 1200,
+      "bCurrent": 1350,
+      "cCurrent": 1280,
+      "maxpower": 1600
+    },
+    "switch": {
+      "switchOn": true,
+      "switchEr": true
+    }
+  },
+  "input2": {
+    "voltage": {
+      "anVoltage": 220,
+      "bnVoltage": 220,
+      "cnVoltage": 220,
+      "abVoltage": 380,
+      "acVoltage": 380,
+      "bcVoltage": 380
+    },
+    "current": {
+      "aCurrent": 1200,
+      "bCurrent": 1350,
+      "cCurrent": 1280,
+      "maxpower": 1600
+    },
+    "switch": {
+      "switchOn": true,
+      "switchEr": true
+    }
+  },
+
+  "switchSOn": true,
+  "switchSEr": false
+}
