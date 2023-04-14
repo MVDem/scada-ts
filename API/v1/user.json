@@ -5,8 +5,10 @@
   "city": "Санкт-Петербург",
   "products": {
     "obj1": {
-      "name": "factory1",
-      "adress": "SPb",
+      "objname": {
+        "name": "factory1",
+        "adress": "SPb"
+      },
       "systems": {
         "userHightVolt": {
           "type": "userHightVolt",
