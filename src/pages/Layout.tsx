@@ -13,6 +13,8 @@ export default function Layout() {
   );
   const dispach = useDispatch();
   const navigate = useNavigate();
+
+  // const setActive = ({ isActive }) => (isActive ? 'menu-extra__link active-link' : 'menu-extra__link');
   console.log(products);
 
   function onClick(param: storePriducts) {
@@ -23,7 +25,6 @@ export default function Layout() {
 
   function logaut() {
     dispach(removeUser());
-
     navigate('/', { replace: true });
   }
 
@@ -38,29 +39,31 @@ export default function Layout() {
                 products.length > 1 ? (
                   products.map((elem, i): JSX.Element => {
                     return (
-                      <button
-                        key={i}
-                        type="button"
-                        onClick={() => onClick(elem)}
-                        className="menu-top__btn"
-                        id={i.toString()}
-                      >
-                        {elem[0]?.name} {elem[0]?.adress}
-                      </button>
+                      <NavLink key={i} to="#" className="menu-extra__link">
+                        <button
+                          type="button"
+                          onClick={() => onClick(elem)}
+                          className="menu-top__btn"
+                          id={i.toString()}
+                        >
+                          {elem[0]?.name} {elem[0]?.adress}
+                        </button>
+                      </NavLink>
                     );
                   })
                 ) : (
                   products[0]?.map((e, i): JSX.Element => {
                     if (i >= 1) {
                       return (
-                        <button
-                          key={i}
-                          type="button"
-                          // onClick={onClick}
-                          className="menu-top__btn"
-                        >
-                          {e.name}
-                        </button>
+                        <NavLink key={i} to="#" className="menu-extra__link">
+                          <button
+                            type="button"
+                            // onClick={onClick}
+                            className="menu-top__btn"
+                          >
+                            {e.name}
+                          </button>
+                        </NavLink>
                       );
                     }
                     return <div key={i}></div>;
@@ -103,7 +106,7 @@ export default function Layout() {
       <footer className="footer">
         <div className="footer__wrapper">
           <div className="footer__copy">
-            <p>© 2022 MVDem.</p>
+            <p>© 2023 MVDem.</p>
           </div>
         </div>
       </footer>

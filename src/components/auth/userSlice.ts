@@ -16,7 +16,7 @@ const userSlice = createSlice({
       for (let key in action.payload) {
         if (action.payload.hasOwnProperty(key)) {
           state[key] = action.payload[key];
-          console.log(action.payload[key]);
+          // console.log(action.payload[key]);
           // console.log(state[key], 'загружен в Store');
         }
         console.log('Данные о пользователе загружены в Store');
