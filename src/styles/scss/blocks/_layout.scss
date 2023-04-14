@@ -31,6 +31,10 @@
   flex-direction: column;
 }
 
+.block {
+  display: none;
+}
+
 .menu-main {
   width: 170px;
   background-color: $menu-background;

@@ -1,9 +1,8 @@
-import { HightVolt } from '../product/HightVolt';
 import CircleProgress from './CircleProgress';
 
 export default function HightVoltCard(props: {
   key: number;
-  prop: HightVolt;
+  prop: any;
 }): JSX.Element {
   const {
     infoaVoltage,

@@ -1,29 +1,32 @@
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import HightVoltCard from '../components/layout/ElecHightVolt';
 import LowVoltCard from '../components/layout/ElecLowVolt';
-import { systems } from '../components/product';
-import { HightVolt } from '../components/product/HightVolt';
-import { LowVolt } from '../components/product/LowVolt';
+import { useSelector } from 'react-redux';
+import { IinitialState } from '../components/type';
 
 export default function DashBoard() {
-  const [time, setTime] = useState(0);
-  useEffect(() => {
-    setInterval(() => {
-      systems.map((e) => {
-        e.setValue();
-        console.log('Значение загружено');
-        return setTime(1);
-      });
-    }, 5000);
-  }, [time]);
+  const mass = useSelector((state: IinitialState) => state.systems);
+  // const state = useSelector((state: IinitialState) => state);
+  // console.log(state);
+
+  // const [time, setTime] = useState(0);
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     mass!.map((e) => {
+  //       e.setValue();
+  //       console.log('Значение загружено');
+  //       return setTime(1);
+  //     });
+  //   }, 50000);
+  // }, [time]);
 
   return (
     <>
       <div id="board-container" className="board__container">
-        {systems?.map((elem, i): JSX.Element => {
-          if (elem instanceof HightVolt) {
+        {mass?.map((elem, i): JSX.Element => {
+          if (elem) {
             return <HightVoltCard key={i} prop={elem} />;
-          } else if (elem instanceof LowVolt) {
+          } else if (elem) {
             return <LowVoltCard key={i} prop={elem} />;
           }
           return <></>;

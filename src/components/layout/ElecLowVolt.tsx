@@ -1,9 +1,8 @@
-import { LowVolt } from '../product/LowVolt';
 import CircleProgress from './CircleProgress';
 
 export default function LowVoltCard(props: {
   key: number;
-  prop: LowVolt;
+  prop: any;
 }): JSX.Element {
   const {
     // infoabVoltage,
