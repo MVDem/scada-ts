@@ -34,14 +34,14 @@
       "systems": {
         "userHightVolt": {
           "type": "userHightVolt",
-          "name": "Power center 10kV",
+          "name": "Power center 6kV",
           "url": "https://raw.githubusercontent.com/MVDem/scada-ts/dev/API/v1/hightVolt.json",
           "namePLC": "PLC-Name",
           "maxPower": 200
         },
         "userLowVolt": {
           "type": "userLowVolt",
-          "name": "Power center 0.4kV",
+          "name": "Power center 0.4kV 2 input",
           "url": "https://raw.githubusercontent.com/MVDem/scada-ts/dev/API/v1/lowVolt.json",
           "namePLC": "PLC-Name",
           "maxPower": 1600
