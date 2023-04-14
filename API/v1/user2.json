@@ -5,12 +5,12 @@
   "city": "Санкт-Петербург",
   "products": {
     "obj1": {
-      "objname": {
-        "name": "factory1",
-        "adress": "SPb"
-      },
-      "systems": {
+      "objId": 3,
+      "objName": "Factory1",
+      "objAdress": "SPb",
+      "objSystems": {
         "userHightVolt": {
+          "id": 104,
           "type": "userHightVolt",
           "name": "Power center 10kV",
           "url": "https://raw.githubusercontent.com/MVDem/scada-ts/dev/API/v1/hightVolt.json",
@@ -18,30 +18,9 @@
           "maxPower": 200
         },
         "userLowVolt": {
+          "id": 105,
           "type": "userLowVolt",
           "name": "Power center 0.4kV",
-          "url": "https://raw.githubusercontent.com/MVDem/scada-ts/dev/API/v1/lowVolt.json",
-          "namePLC": "PLC-Name",
-          "maxPower": 1600
-        }
-      }
-    },
-    "obj2": {
-      "objname": {
-        "name": "factory2",
-        "adress": "SPb"
-      },
-      "systems": {
-        "userHightVolt": {
-          "type": "userHightVolt",
-          "name": "Power center 6kV",
-          "url": "https://raw.githubusercontent.com/MVDem/scada-ts/dev/API/v1/hightVolt.json",
-          "namePLC": "PLC-Name",
-          "maxPower": 200
-        },
-        "userLowVolt": {
-          "type": "userLowVolt",
-          "name": "Power center 0.4kV 2 input",
           "url": "https://raw.githubusercontent.com/MVDem/scada-ts/dev/API/v1/lowVolt.json",
           "namePLC": "PLC-Name",
           "maxPower": 1600
