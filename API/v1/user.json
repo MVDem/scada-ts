@@ -27,8 +27,10 @@
       }
     },
     "obj2": {
-      "name": "factory2",
-      "adress": "SPb",
+      "objname": {
+        "name": "factory2",
+        "adress": "SPb"
+      },
       "systems": {
         "userHightVolt": {
           "type": "userHightVolt",
