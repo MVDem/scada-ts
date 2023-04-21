@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   background-color: $background-body;
+  font-family: 'Roboto', sans-serif;
 }
 
 .visually-hidden {
@@ -13,7 +14,6 @@
   padding: 0;
   overflow: hidden;
   border: 0;
-  clip: rect(0 0 0 0);
 }
 
 @media (max-width: $max-tablet-width) {

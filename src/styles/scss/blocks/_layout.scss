@@ -2,6 +2,7 @@
   width: 100vw;
   height: 5vh;
   box-sizing: border-box;
+  background-color: $background-header;
 }
 
 .main {
@@ -12,8 +13,7 @@
   background-color: $background-body;
 }
 .menu {
-  // height: 100%;
-  max-width: 400px;
+  max-width: 350px;
   background-color: $menu-extra-background;
   border-radius: 8px;
   box-sizing: border-box;
@@ -52,10 +52,30 @@
     border: none;
     text-align: left;
     color: $menu-text;
+    @include font(16px, 19px, 300);
   }
 
   &__btn:hover {
     background-color: $menu-hover;
+  }
+  .active > button {
+    background-color: $menu-hover;
+  }
+
+  &__btn-home {
+    height: 50px;
+    padding-left: 80px;
+    margin-bottom: 50px;
+    @include font(16px, 19px, 300);
+  }
+
+  &__home {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: white;
+    left: 20px;
   }
 }
 
@@ -68,6 +88,7 @@
     color: $menu-text;
     border: none;
     text-align: left;
+    @include font(16px, 19px, 300);
   }
   &__logout:hover {
     background-color: $menu-hover;
@@ -75,17 +96,19 @@
 }
 
 .menu-extra {
-  width: 150px;
+  width: 170px;
+  padding-top: 30px;
   background-color: $menu-extra-background;
 
   &__btn {
-    width: 100%;
+    min-width: 170px;
     height: 34px;
-    padding: 0 30px;
+    padding: 0 10px;
     background-color: inherit;
     border: none;
     text-align: left;
     color: $menu-extra-text;
+    @include font(16px, 19px, 300);
   }
 
   &__btn:hover {
@@ -95,6 +118,12 @@
   &__link {
     text-decoration: none;
     color: $menu-extra-text;
+    width: 100%;
+  }
+
+  .active > button {
+    background-color: $menu-extra-hover;
+    color: $menu-text;
   }
 }
 
@@ -104,5 +133,5 @@
   bottom: 0;
   width: 100vw;
   height: 5vh;
-  //border: 1px solid black;
+  background-color: $background-footer;
 }

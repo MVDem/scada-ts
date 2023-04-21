@@ -4,6 +4,9 @@ import { IinitialState } from '../type';
 const initialState: IinitialState = {
   userId: null,
   email: null,
+  name: null,
+  phone: null,
+  city: null,
   products: null,
   systems: [],
 };
@@ -19,13 +22,13 @@ const userSlice = createSlice({
           // console.log(action.payload[key]);
           // console.log(state[key], 'загружен в Store');
         }
-        console.log('Данные о пользователе загружены в Store');
+        // console.log('Данные о пользователе загружены в Store');
       }
     },
-    setUserSystems: (state: any, action) => {
-      state.systems = action.payload;
-      // console.log(state.systems);
-      console.log('Системы загружены в Store');
+    setUserSystems: () => {
+      // console.log(action.payload);
+      // state.systems = action.payload;
+      // console.log('Системы загружены в Store');
     },
 
     removeUser(state) {

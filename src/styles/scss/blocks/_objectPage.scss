@@ -1,0 +1,10 @@
+.obj-container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(400px, auto));
+  grid-auto-rows: minmax(100px, auto);
+  gap: 10px;
+  overflow: auto;
+}

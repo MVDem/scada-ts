@@ -2,6 +2,7 @@
 @import './_mixins.scss';
 @import './_reset.scss';
 @import './_general.scss';
+@import './_fonts.scss';
 @import './blocks/_layout.scss';
 @import './blocks/_homepage.scss';
 @import './blocks/_dashBoard.scss';
@@ -9,6 +10,8 @@
 @import './blocks/_electricityCard.scss';
 @import './blocks/_lineProgress.scss';
 @import './blocks/_auth.scss';
+@import './blocks/_objectPage';
+@import './blocks/_systemPageEl';
 
 //@import './_general.scss';
 //@import './_fonts.scss';

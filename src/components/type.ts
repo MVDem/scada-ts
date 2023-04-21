@@ -1,4 +1,4 @@
-//=========user===============
+//=========dataFromServer===============
 
 export interface IUser {
   id: string;
@@ -10,13 +10,14 @@ export interface IUser {
 }
 
 export interface IUserProducts {
-  obj: IuserObject;
   [propName: string]: IuserObject;
 }
 
 export interface IuserObject {
-  objname: IUserObjName;
-  systems: IuserSystems;
+  objId: number | null;
+  objName: string | null;
+  objAdress: string | null;
+  objSystems: IuserSystems;
 }
 
 export interface IuserSystems {
@@ -24,11 +25,11 @@ export interface IuserSystems {
 }
 
 export interface IuserSystem {
-  adress?: string;
-  obj: string;
   name: string;
-  url: string;
+  type: string;
   namePLC: string;
+  url: string;
+  maxPower: number;
 }
 
 // ========state===========
@@ -40,33 +41,41 @@ export interface IState {
 export interface IinitialState {
   userId: string | null;
   email: string | null;
-  name?: string | null;
-  phone?: number | null;
-  city?: string | null;
-  products: Array<storePriducts> | null;
+  name: string | null;
+  phone: number | null;
+  city: string | null;
+  products: Array<IStoreObjects> | null;
   systems?: Array<systems>;
 }
 
-export type storePriducts = Array<IuserSystem | IUserObjName>;
+// export type storePriducts = Array<IuserSystem>;
 
-export interface IUserObjName {
-  name: string;
-  adress: string;
+export interface IStoreObjects {
+  objId: number | null;
+  objName: string | null;
+  objAdress: string | null;
+  objSystems: Array<IuserSystem | null>;
 }
 
 //=========systems============
 
 export type systems = IHightVolt | ILowVolt;
 
+export interface systemsObj {
+  objId: number | null;
+  objName: string | null;
+  objAdress: string | null;
+  objSystemsData: Array<IHightVolt | ILowVolt>;
+}
 export interface IHightVolt {
-  input1: IInput;
+  input1?: IInput;
   input2?: IInput;
   switchSOn?: boolean;
   switchSEr?: boolean;
 }
 
 export interface ILowVolt {
-  input1: IInput;
+  input1?: IInput;
   input2?: IInput;
   switchSOn?: boolean;
   switchSEr?: boolean;

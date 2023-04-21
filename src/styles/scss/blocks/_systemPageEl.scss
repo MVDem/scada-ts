@@ -1,0 +1,320 @@
+.system {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    'current  voltage  alarms'
+    'current  scheme  alarms'
+    'data  current-schedule  current-schedule'
+    'data  current-schedule  current-schedule';
+  gap: 10px;
+
+  &__current {
+    grid-area: current;
+    border-radius: 8px;
+    background-color: white;
+  }
+
+  &__voltage {
+    grid-area: voltage;
+    border-radius: 8px;
+    background-color: white;
+  }
+
+  &__scheme {
+    grid-area: scheme;
+    border-radius: 8px;
+    background-color: white;
+  }
+
+  &__current-schedule {
+    grid-area: current-schedule;
+    border-radius: 8px;
+    background-color: white;
+  }
+
+  &__data {
+    grid-area: data;
+    border-radius: 8px;
+    background-color: white;
+  }
+
+  &__camera {
+    grid-area: camera;
+    border-radius: 8px;
+    background-color: white;
+    display: none;
+  }
+
+  &__alarms {
+    grid-area: alarms;
+    border-radius: 8px;
+    background-color: white;
+  }
+}
+
+.current {
+  width: calc(100% - 20px);
+  height: calc(100% - 30px);
+  margin: 20px 10px 10px 10px;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  border-radius: 8px;
+  position: relative;
+  justify-content: space-around;
+
+  &__title {
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    background-color: white;
+    padding: 0 10px;
+    @include font(19px, 22px, 500);
+  }
+
+  div {
+    justify-content: space-around;
+
+    h5 {
+      margin: 15px 0;
+      text-align: center;
+      @include font(16px, 19px, 500);
+    }
+  }
+
+  &__value {
+    display: flex;
+    flex-direction: row;
+  }
+
+  p {
+    text-align: center;
+    @include font(16px, 19px, 300);
+  }
+}
+
+.voltage {
+  width: calc(100% - 20px);
+  height: calc(100% - 30px);
+  margin: 20px 10px 10px 10px;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  &__title {
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    background-color: white;
+    padding: 0 10px;
+    @include font(19px, 22px, 500);
+  }
+
+  h5 {
+    margin-top: 20px;
+    @include font(16px, 19px, 500);
+  }
+
+  &__value {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+
+    p {
+      text-align: center;
+      @include font(16px, 19px, 300);
+      line-height: 1.5em;
+    }
+  }
+}
+.scheme {
+  width: calc(100% - 20px);
+  height: calc(100% - 30px);
+  margin: 20px 10px 10px 10px;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  border-radius: 8px;
+  position: relative;
+
+  &__title {
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    background-color: white;
+    padding: 0 10px;
+    @include font(19px, 22px, 500);
+  }
+
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__switchA {
+    position: relative;
+
+    p::after {
+      content: '';
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 2px solid black;
+      top: 0;
+      left: 0;
+      transform: translateX(-50%) translateY(-50%);
+      background-color: #57a639;
+    }
+    p::before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 30px;
+      bottom: 0;
+      left: 0;
+      transform: translateX(-50%) translateY(50%);
+      background-color: black;
+    }
+
+    span::after {
+      content: '';
+      position: absolute;
+      width: 150px;
+      height: 2px;
+      bottom: -15px;
+      left: 0;
+      background-color: gray;
+      // transform: translateX(-100%);
+    }
+  }
+
+  &__switchB {
+    margin-top: 60px;
+    position: relative;
+    z-index: 10;
+
+    p::after {
+      content: '';
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 2px solid black;
+      top: 0;
+      left: 0;
+      transform: translateX(-50%) translateY(-50%);
+      background-color: #ff496c;
+    }
+  }
+
+  &__switchC {
+    position: relative;
+
+    p::after {
+      content: '';
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 2px solid black;
+      top: 0;
+      left: 0;
+      transform: translateX(-50%) translateY(-50%);
+      background-color: #57a639;
+    }
+
+    p::before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 30px;
+      bottom: 0;
+      left: 0;
+      transform: translateX(-50%) translateY(50%);
+      background-color: black;
+    }
+
+    span::after {
+      content: '';
+      position: absolute;
+      width: 150px;
+      height: 2px;
+      bottom: -15px;
+      left: 0;
+      background-color: gray;
+      transform: translateX(-100%);
+    }
+  }
+}
+
+.data {
+  width: calc(100% - 20px);
+  height: calc(100% - 30px);
+  margin: 20px 10px 10px 10px;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  border-radius: 8px;
+  position: relative;
+
+  &__title {
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    background-color: white;
+    padding: 0 10px;
+    @include font(19px, 22px, 500);
+  }
+
+  &__content {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    div {
+      min-width: 50px;
+      display: flex;
+      flex-direction: column;
+
+      p {
+        @include font(14px, 16px, 300);
+        line-height: 2em;
+      }
+    }
+  }
+}
+
+.shedule {
+  width: calc(100% - 20px);
+  height: calc(100% - 30px);
+  margin: 20px 10px 10px 10px;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  border-radius: 8px;
+  position: relative;
+
+  &__title {
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    background-color: white;
+    padding: 0 10px;
+    @include font(19px, 22px, 500);
+  }
+  &__content {
+    box-sizing: border-box;
+    padding-top: 20px;
+  }
+}

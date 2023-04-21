@@ -5,6 +5,8 @@ import DashBoard from './pages/DashBoard';
 import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
 import { Private } from './components/auth/hoc/Private';
+import BoardObj from './pages/ObgectPage';
+import BoardSys from './pages/SystemPage';
 
 const App: React.FC = () => {
   return (
@@ -19,6 +21,22 @@ const App: React.FC = () => {
             element={
               <Private>
                 <DashBoard />
+              </Private>
+            }
+          />
+          <Route
+            path="/dashboard/:id"
+            element={
+              <Private>
+                <BoardObj />
+              </Private>
+            }
+          />
+          <Route
+            path="/dashboard/:id/:type"
+            element={
+              <Private>
+                <BoardSys />
               </Private>
             }
           />

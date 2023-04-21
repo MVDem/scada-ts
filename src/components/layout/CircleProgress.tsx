@@ -5,7 +5,7 @@ export default function CircleProgress(props: {
   const { radius, percentage } = props;
   const dashArray = radius * Math.PI * 2;
   const dashOffset = dashArray - (dashArray * percentage) / 100;
-  const circleWidth = 100;
+  const circleWidth = 80;
 
   return (
     <div>

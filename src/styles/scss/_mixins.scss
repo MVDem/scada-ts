@@ -1,10 +1,5 @@
-@mixin flex-center-space-between() {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 @mixin font($size: 14px, $heght: 17px, $weight: 300, $style: normal) {
+  font-family: 'Roboto', sans-serif;
   font-size: $size;
   font-weight: $weight;
   line-height: $heght;

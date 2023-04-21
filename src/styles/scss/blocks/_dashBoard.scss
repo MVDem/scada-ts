@@ -1,16 +1,57 @@
-.board {
-  height: 100%;
-  width: 80%;
+.dashboard {
+  height: 90vh;
+  width: 100%;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    'plans  notification  alarms'
+    'plans  contacts  contacts';
+  gap: 10px;
 
-  &__container {
-    margin: 10px;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
+  &__plans {
+    grid-area: plans;
+    background-color: white;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+
+  &__alarms {
+    grid-area: alarms;
+    background-color: white;
+    border-radius: 8px;
+  }
+
+  &__notification {
+    grid-area: notification;
+    background-color: white;
+    border-radius: 8px;
+  }
+
+  &__contacts {
+    grid-area: contacts;
+    background-color: white;
+    border-radius: 8px;
+  }
+}
+
+.card-plans {
+  width: calc(100% - 20px);
+  height: calc(100% - 30px);
+  margin: 20px 10px 10px 10px;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  border-radius: 8px;
+  position: relative;
+
+  &__title {
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    background-color: white;
+    padding: 0 10px;
+    @include font(19px, 22px, 500);
   }
 }
